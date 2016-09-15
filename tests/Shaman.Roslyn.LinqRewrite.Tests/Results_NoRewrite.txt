@@ -1,0 +1,87 @@
+Project Shaman.Roslyn.LinqRewrite.Tests (.NETFramework,Version=v4.6) was previously compiled. Skipping compilation.
+xUnit.net .NET CLI test runner (64-bit Desktop .NET win10-x64)
+  Discovering: Shaman.Roslyn.LinqRewrite.Tests
+  Discovered:  Shaman.Roslyn.LinqRewrite.Tests
+  Starting:    Shaman.Roslyn.LinqRewrite.Tests
+    System.Linq.Tests.ShortCircuitingTests.SingleWithPredicateWorksLikeWhereFollowedBySingle [FAIL]
+      Assert.Equal() Failure
+      Expected: 10
+      Actual:   4
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.SingleWithPredicateWorksLikeWhereFollowedBySingle()
+    System.Linq.Tests.ShortCircuitingTests.MinNullableSingleDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 5
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.MinNullableSingleDoesntCheckAll()
+    System.Linq.Tests.ShortCircuitingTests.ListLastDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 4
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.ListLastDoesntCheckAll()
+    System.Linq.Tests.ShortCircuitingTests.MinNullableDoubleDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 5
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.MinNullableDoubleDoesntCheckAll()
+    System.Linq.Tests.ShortCircuitingTests.MinDoubleDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 5
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.MinDoubleDoesntCheckAll()
+    System.Linq.Tests.ShortCircuitingTests.MinSingleDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 5
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.MinSingleDoesntCheckAll()
+    System.Linq.Tests.ShortCircuitingTests.SingleWithPredicateDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 4
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.SingleWithPredicateDoesntCheckAll()
+    System.Linq.Tests.ShortCircuitingTests.SingleOrDefaultWithPredicateWorksLikeWhereFollowedBySingleOrDefault [FAIL]
+      Assert.Equal() Failure
+      Expected: 10
+      Actual:   4
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.SingleOrDefaultWithPredicateWorksLikeWhereFollowedBySingleOrDefault()
+    System.Linq.Tests.ShortCircuitingTests.SingleOrDefaultWithPredicateDoesntCheckAll [FAIL]
+      Assert.Equal() Failure
+      Expected: 4
+      Actual:   10
+      Stack Trace:
+           at System.Linq.Tests.ShortCircuitingTests.SingleOrDefaultWithPredicateDoesntCheckAll()
+    System.Linq.Tests.OrderByDescendingTests.OrderByExtremeComparer [FAIL]
+      Assert.Equal() Failure
+      Expected: <ReverseIterator>d__74<Int32> [9, 8, 7, 6, 5, ...]
+      Actual:   OrderedEnumerable<Int32, Int32> [3, 5, 1, 4, 9, ...]
+      Stack Trace:
+           at System.Linq.Tests.OrderByDescendingTests.OrderByExtremeComparer()
+    System.Linq.Tests.ToArrayTests.ToArray_WorkWhenCountChangedAsynchronously [FAIL]
+      System.ArgumentException : Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+      Stack Trace:
+           at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+           at System.Array.CopyTo(Array array, Int32 index)
+           at System.Linq.Tests.Helpers.TestCollection`1.CopyTo(T[] array, Int32 arrayIndex)
+           at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+           at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+           at System.Linq.Tests.ToArrayTests.ToArray_WorkWhenCountChangedAsynchronously()
+    System.Linq.Tests.ToListTests.ToList_WorkWhenCountChangedAsynchronously [FAIL]
+      System.ArgumentException : Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+      Stack Trace:
+           at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+           at System.Array.CopyTo(Array array, Int32 index)
+           at System.Linq.Tests.Helpers.TestCollection`1.CopyTo(T[] array, Int32 arrayIndex)
+           at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+           at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+           at System.Linq.Tests.ToListTests.ToList_WorkWhenCountChangedAsynchronously()
+  Finished:    Shaman.Roslyn.LinqRewrite.Tests
+=== TEST EXECUTION SUMMARY ===
+   Shaman.Roslyn.LinqRewrite.Tests  Total: 1216, Errors: 0, Failed: 12, Skipped: 0, Time: 49.512s
+SUMMARY: Total: 1 targets, Passed: 0, Failed: 1.

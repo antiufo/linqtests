@@ -1,0 +1,103 @@
+diff --git a/Results_NoRewrite.txt b/Results_Rewrite.txt
+index bfc1fdd..c3093b4 100644
+--- a/Results_NoRewrite.txt
++++ b/Results_Rewrite.txt
+@@ -1,8 +1,58 @@
+-Project Shaman.Roslyn.LinqRewrite.Tests (.NETFramework,Version=v4.6) was previously compiled. Skipping compilation.
++Project Shaman.Roslyn.LinqRewrite.Tests (.NETFramework,Version=v4.6) will be compiled because project is not safe for incremental compilation. Use --build-profile flag for more information.
++Compiling Shaman.Roslyn.LinqRewrite.Tests for .NETFramework,Version=v4.6
++Rewriting LINQ to procedural code...
++Rewritten 359 LINQ queries in 160 methods as procedural code.
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\project.json(26,31): warning NU1007: Dependency specified was System.Runtime >= 4.0.0 but ended up with System.Runtime 4.0.20.0.
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\project.json(27,39): warning NU1007: Dependency specified was System.Threading.Tasks >= 4.0.0 but ended up with System.Threading.Tasks 4.0.10.0.
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\warning CS2002: Source file 'obj\Debug\net46\dotnet-compile.assemblyinfo.cs' specified multiple times
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(169,58): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(173,58): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(190,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(194,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(197,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(125,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(141,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(195,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(365,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(400,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(486,17): warning CS0162: Unreachable code detected
++D:\Repositories\LinqTests\tests\Shaman.Roslyn.LinqRewrite.Tests\(521,17): warning CS0162: Unreachable code detected
++
++Compilation succeeded.
++    15 Warning(s)
++    0 Error(s)
++
++Time elapsed 00:00:15.1469267
++ (The compilation time can be improved. Run "dotnet build --build-profile" for more information)
++
+ xUnit.net .NET CLI test runner (64-bit Desktop .NET win10-x64)
+   Discovering: Shaman.Roslyn.LinqRewrite.Tests
+   Discovered:  Shaman.Roslyn.LinqRewrite.Tests
+   Starting:    Shaman.Roslyn.LinqRewrite.Tests
++    System.Linq.Tests.ToListTests.ToList_WorkWhenCountChangedAsynchronously [FAIL]
++      System.ArgumentException : Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
++      Stack Trace:
++           at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
++           at System.Array.CopyTo(Array array, Int32 index)
++           at System.Linq.Tests.Helpers.TestCollection`1.CopyTo(T[] array, Int32 arrayIndex)
++           at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
++           at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
++           at System.Linq.Tests.ToListTests.ToList_WorkWhenCountChangedAsynchronously()
++    System.Linq.Tests.ToArrayTests.ToArray_WorkWhenCountChangedAsynchronously [FAIL]
++      System.ArgumentException : Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
++      Stack Trace:
++           at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
++           at System.Array.CopyTo(Array array, Int32 index)
++           at System.Linq.Tests.Helpers.TestCollection`1.CopyTo(T[] array, Int32 arrayIndex)
++           at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
++           at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
++           at System.Linq.Tests.ToArrayTests.ToArray_WorkWhenCountChangedAsynchronously()
++    System.Linq.Tests.MinMaxTests.NaNFirstDoubleWithSelector [FAIL]
++      yyyyy
++      Expected: False
++      Actual:   True
++      Stack Trace:
++           at System.Linq.Tests.MinMaxTests.NaNFirstDoubleWithSelector()
+     System.Linq.Tests.ShortCircuitingTests.SingleWithPredicateWorksLikeWhereFollowedBySingle [FAIL]
+       Assert.Equal() Failure
+       Expected: 10
+@@ -57,31 +107,19 @@ xUnit.net .NET CLI test runner (64-bit Desktop .NET win10-x64)
+       Actual:   10
+       Stack Trace:
+            at System.Linq.Tests.ShortCircuitingTests.SingleOrDefaultWithPredicateDoesntCheckAll()
++    System.Linq.Tests.MinMaxTests.NaNFirstSingleWithSelector [FAIL]
++      Assert.False() Failure
++      Expected: False
++      Actual:   True
++      Stack Trace:
++           at System.Linq.Tests.MinMaxTests.NaNFirstSingleWithSelector()
+     System.Linq.Tests.OrderByDescendingTests.OrderByExtremeComparer [FAIL]
+       Assert.Equal() Failure
+       Expected: <ReverseIterator>d__74<Int32> [9, 8, 7, 6, 5, ...]
+       Actual:   OrderedEnumerable<Int32, Int32> [3, 5, 1, 4, 9, ...]
+       Stack Trace:
+            at System.Linq.Tests.OrderByDescendingTests.OrderByExtremeComparer()
+-    System.Linq.Tests.ToArrayTests.ToArray_WorkWhenCountChangedAsynchronously [FAIL]
+-      System.ArgumentException : Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+-      Stack Trace:
+-           at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+-           at System.Array.CopyTo(Array array, Int32 index)
+-           at System.Linq.Tests.Helpers.TestCollection`1.CopyTo(T[] array, Int32 arrayIndex)
+-           at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+-           at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+-           at System.Linq.Tests.ToArrayTests.ToArray_WorkWhenCountChangedAsynchronously()
+-    System.Linq.Tests.ToListTests.ToList_WorkWhenCountChangedAsynchronously [FAIL]
+-      System.ArgumentException : Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+-      Stack Trace:
+-           at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+-           at System.Array.CopyTo(Array array, Int32 index)
+-           at System.Linq.Tests.Helpers.TestCollection`1.CopyTo(T[] array, Int32 arrayIndex)
+-           at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+-           at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+-           at System.Linq.Tests.ToListTests.ToList_WorkWhenCountChangedAsynchronously()
+   Finished:    Shaman.Roslyn.LinqRewrite.Tests
+ === TEST EXECUTION SUMMARY ===
+-   Shaman.Roslyn.LinqRewrite.Tests  Total: 1216, Errors: 0, Failed: 12, Skipped: 0, Time: 49.512s
++   Shaman.Roslyn.LinqRewrite.Tests  Total: 1216, Errors: 0, Failed: 14, Skipped: 0, Time: 46.803s
+ SUMMARY: Total: 1 targets, Passed: 0, Failed: 1.

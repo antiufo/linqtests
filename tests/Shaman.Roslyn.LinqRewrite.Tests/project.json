@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "compilerName": "csc-linq-rewrite",
+    "compile": {
+      "include": [
+        "../**/*.cs"
+      ],
+      "exclude": ["../obj/", "../bin/", "../packages/"]
+    }
+  },
+  "tools": {
+    "dotnet-compile-csc-linq-rewrite": {
+      "version": "1.0.1.7",
+      "imports": "portable-net45+win8+wp8+wpa81"
+    }
+  },
+  "dependencies": {
+    "xunit": "2.2.0-beta2-build3300",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
+  },
+  "frameworks": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0",
+        "System.Threading.Tasks": "4.0"
+      }
+    }
+  },
+  "testRunner": "xunit"
+}
